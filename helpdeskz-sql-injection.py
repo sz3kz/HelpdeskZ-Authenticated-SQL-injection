@@ -204,8 +204,8 @@ def get_csrfhash(connection, url):
 
 def get_ticket_link(connection, url, email, password, csrfhash):
     """
-    Fetches the csrfhash needed for login by parsing the
-    main helpdeskz page via GET.
+    Fetches the link to a submitted ticket by logging in and parsing
+    the page returned after login.
 
     Args:
         connection (requests.sessions.Session): Active HTTP session.
