@@ -229,6 +229,9 @@ def get_ticket_link(connection, url, email, password, csrfhash):
     ticket_tag = soup.find("a", attrs={"class":"ticket_subject"})
     if ticket_tag is None:
         print_failure("Failed to fetch the ticket link.")
+        print_failure("Most likely either the url was not denoted properly,")
+        print_failure("or the ticket does not exist,")
+        print_failure("Refer to help page for both")
         print_failure("Response:")
         print(f"{response.content}")
         sys.exit(1)
@@ -254,6 +257,10 @@ def get_attachment_link(connection, ticket_link):
     attachment_tag = soup.find("a", attrs={"target":"_blank"})
     if attachment_tag is None:
         print_failure("Failed to fetch the full vulnerable url.")
+        print_failure("This may be due to an existing ticket's lack")
+        print_failure("lack of file attachment.")
+        print_failure("Delete file-less ticket and create one with ")
+        print_failure("a file attached to it!")
         print_failure("Response:")
         print(f"{response.content}")
         sys.exit(1)
@@ -347,7 +354,7 @@ def main():
                                     "attached to it (can be any file, even empty).") )
     parser.add_argument("url",
                         type=str,
-                        help="root address of the HelpDeskZ service "
+                        help="root address of the HelpDeskZ service, WITH A SLASH AT THE END."
                             "(eg. \"http://aid.htb/assistance/\" )")
     parser.add_argument("email",
                         type=str,
