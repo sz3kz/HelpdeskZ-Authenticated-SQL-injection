@@ -410,11 +410,7 @@ def main():
     for offset in range(0, entry_count):
         entries.append(Entry(offset, COLUMNS))
 
-    # for entry in entries:
-    #    for column in entry.columns:
-    #        entry.update_length(f"{column}", get_length(connection,
-    #            attachment_url, f"{TABLE}", f"{column}", entry.offset) )
-
+    # determine length of every value  to be extracted
     for entry in entries:
         for column in entry.columns:
             length = 0
@@ -438,6 +434,7 @@ def main():
     alphanum_chars = list(string.ascii_lowercase + string.ascii_uppercase \
                     + string.digits + string.punctuation)
 
+    # extract values
     for entry in entries:
         for column in entry.columns:
             for character_position in range(0,entry.row_length[f"{column}"]):
