@@ -35,3 +35,10 @@ rm -r myvenv/
 ```bash
 rm -rf HelpdeskZ-Authenticated-SQL-injection/
 ```
+
+## Note about usage
+This script was not built to replace SQLmap. If you require a more sophisticated program to enumerate the database, I urge you to consider setting up SQLmap guided by [0xdf's Help box writeup](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+The functionality of this script is limited and the query templates I used don't play well with certain tables. For example, I had a problem enumerating the 'information_schema.tables" table in order to learn the available tables in the database.
+
+The option to specify different columns and table are merely added as a bonus.
