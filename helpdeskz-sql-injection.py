@@ -348,15 +348,15 @@ def main():
     parser.add_argument("url",
                         type=str,
                         help="root address of the HelpDeskZ service "
-                            "(eg. \"http://help.htb/helpdeskz/\" )")
+                            "(eg. \"http://aid.htb/assistance/\" )")
     parser.add_argument("email",
                         type=str,
                         help="authenticated user's login email address "
-                            "(eg. \"helpme@helpme.com\" )")
+                            "(eg. \"aidme@aidme.com\" )")
     parser.add_argument("password",
                         type=str,
                         help="authenticated user's login password "
-                            "(eg. \"godhelpmeplz\" )")
+                            "(eg. \"godaidmecouldyou\" )")
     parser.add_argument("-T", "--table",
                         type=str,
                         default="staff",
