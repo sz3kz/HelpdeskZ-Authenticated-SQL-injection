@@ -5,6 +5,8 @@ HelpDeskZ &lt; 1.0.2 Authenticated SQL Injection (updated for current python)
 1) Open a virtual python environment
 ```bash
 python3 -m venv myvenv
+```
+```bash
 source myvenv/bin/activate
 ```
 2) Install requirements
