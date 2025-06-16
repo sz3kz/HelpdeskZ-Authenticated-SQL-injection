@@ -357,11 +357,11 @@ def main():
                         type=str,
                         help="authenticated user's login password "
                             "(eg. \"godaidmecouldyou\" )")
-    parser.add_argument("-T", "--table",
+    parser.add_argument("--table",
                         type=str,
                         default="staff",
                         help="Table of interest (default = \"staff\").")
-    parser.add_argument("-C", "--columns",
+    parser.add_argument("--columns",
                         type=str,
                         default="username,password",
                         help="Column(s) of interest (default = \"username,password\").")
